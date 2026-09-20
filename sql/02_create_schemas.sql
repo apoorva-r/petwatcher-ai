@@ -1,0 +1,5 @@
+-- Planned schemas:
+-- petwatch_dev.bronze
+-- petwatch_dev.silver
+-- petwatch_dev.gold
+-- petwatch_dev.ai

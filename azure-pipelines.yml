@@ -1,0 +1,14 @@
+# CI/CD skeleton.
+# We will configure Azure DevOps deployment after the first local
+# Asset Bundle deployment works successfully.
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: |
+      echo "PetWatch CI/CD will be configured in a later milestone."
+    displayName: "PetWatch CI placeholder"

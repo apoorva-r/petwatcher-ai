@@ -1,0 +1,1 @@
+-- Tables will be added after the first bundle deployment.

@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    petwatch_sample_data:
+      name: "[${bundle.target}] PetWatch - Generate Sample Data"
+
+      tasks:
+        - task_key: generate_sample_data
+          spark_python_task:
+            python_file: ../src/data/generate_pet_data.py
