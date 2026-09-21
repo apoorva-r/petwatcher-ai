@@ -8,3 +8,6 @@ targets:
   dev:
     mode: development
     default: true
+
+    workspace:
+      host: https://dbc-68acc97f-7b4a.cloud.databricks.com

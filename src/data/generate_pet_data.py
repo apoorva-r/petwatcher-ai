@@ -23,6 +23,7 @@ def generate_pets(spark, count=1000):
 
     for i in range(count):
         species = random.choice(list(SPECIES))
+
         rows.append(
             (
                 f"PET-{i:05d}",
@@ -47,6 +48,11 @@ if __name__ == "__main__":
 
     df = generate_pets(spark)
 
-    # Temporary output for the first milestone.
-    # We will replace this with Unity Catalog Delta tables next.
-    display(df.limit(20))
+    (
+        df.write
+        .format("delta")
+        .mode("overwrite")
+        .saveAsTable("petwatch_dev.bronze.pets")
+    )
+
+    print(f"Wrote {df.count()} pets to petwatch_dev.bronze.pets")
