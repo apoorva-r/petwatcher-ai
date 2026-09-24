@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    petwatch_pipeline:
+      name: "[${bundle.target}] PetWatch Lakeflow Pipeline"
+
+      catalog: petwatch_dev
+      schema: silver
+
+      serverless: true
+      development: true
+      continuous: false
+
+      libraries:
+        - glob:
+            include: ../src/pipelines/*.py
