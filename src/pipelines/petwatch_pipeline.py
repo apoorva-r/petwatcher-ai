@@ -8,7 +8,7 @@ from pyspark.sql.functions import col, current_timestamp, lower, trim
 )
 def silver_pets():
     return (
-        spark.read.table("petwatch_dev.bronze.pets")
+        spark.readStream.table("petwatch_dev.bronze.pets")
         .select(
             trim(col("pet_id")).alias("pet_id"),
             trim(col("name")).alias("name"),

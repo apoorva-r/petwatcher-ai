@@ -12,4 +12,4 @@ resources:
 
       libraries:
         - glob:
-            include: ../src/pipelines/*.py
+            include: ../src/pipelines/**
